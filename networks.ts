@@ -103,11 +103,7 @@ export const NETWORKS: NetworksObject = {
     label: "Moonbeam Mainnet",
     url: "https://moonbeam.moonscan.io",
     apiKey: process.env.APIKEY_MOONSCAN as string,
-    endpoint: (contractAddress: string) => `https://api-moonbeam.moonscan.io/api
-    ?module=contract
-    &action=getabi
-    &address=${contractAddress}
-    &apikey=${process.env.APIKEY_MOONSCAN}`
+    endpoint: (contractAddress: string) => `https://api-moonbeam.moonscan.io/api?module=contract&action=getabi&address=${contractAddress}&apikey=${process.env.APIKEY_MOONSCAN}`,
   },
   moonRiver: {
     label: "Moonriver Mainnet",
