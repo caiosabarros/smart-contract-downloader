@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const GitHubButton = dynamic<any>(
-  () => import("react-github-btn").then((mod) => mod.default),
+  () => import("react-github-btn").then((mod) => mod.default as React.ComponentType<any>),
   { ssr: false }
 );
 

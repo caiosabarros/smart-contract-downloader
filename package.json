@@ -2,7 +2,7 @@
   "name": "smart-contract-downloader",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 1111",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
