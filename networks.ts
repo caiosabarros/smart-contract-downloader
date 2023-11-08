@@ -64,21 +64,21 @@ export const NETWORKS: NetworksObject = {
     endpoint: (contractAddress: string) =>
       `https://api-testnet.bscscan.com/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_BSCSCAN}`,
   },
-  "arbitrum one": {
+  arbitrumOne: {
     label: "Arbitrum One Mainnet",
     url: "https://arbiscan.io",
-    apiKey: process.env.APIKEY_BSCSCAN as string,
+    apiKey: process.env.APIKEY_ARBITRUMSCAN as string,
     endpoint: (contractAddress: string) =>
-      `https://api.arbiscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_BSCSCAN}`,
+      `https://api.arbiscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_ARBITRUMSCAN}`,
   },
-  "arbitrum nova": {
+  arbitrumNova: {
     label: "Arbitrum Nova Mainnet",
     url: "https://nova.arbiscan.io",
     apiKey: process.env.APIKEY_ARBITRUMSCAN as string,
     endpoint: (contractAddress: string) =>
-      `https://api-nova.arbiscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_ARBITRUMSCAN}`,
+      `https://api-nova.arbiscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_ARBITRUMNOVASCAN}`,
   },
-  "arbitrum goerli": {
+  arbitrumGoerli: {
     label: "Arbitrum Goerli Testnet",
     url: "https://goerli.arbiscan.io",
     apiKey: process.env.APIKEY_ARBITRUMSCAN as string,
@@ -98,5 +98,27 @@ export const NETWORKS: NetworksObject = {
     apiKey: process.env.APIKEY_FTMSCAN as string,
     endpoint: (contractAddress: string) =>
       `https://api-testnet.ftmscan.com/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_FTMSCAN}`,
+  },
+  moonBeam: {
+    label: "Moonbeam Mainnet",
+    url: "https://moonbeam.moonscan.io",
+    apiKey: process.env.API_MOONSCAN as string,
+    endpoint: (contractAddress: string) => `https://api-moonbeam.moonscan.io/api
+    ?module=contract
+    &action=getabi
+    &address=${contractAddress}
+    &apikey=${process.env.API_MOONSCAN}`
+  },
+  moonRiver: {
+    label: "Moonriver Mainnet",
+    url: "https://moonriver.moonscan.io",
+    apiKey: process.env.APIKEY_MOONRIVER as string,
+    endpoint: (contractAddress: string) => `https://api-moonriver.moonscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_MOONRIVER}`,
+  },
+  optimism: {
+    label: "Optimism Mainnet",
+    url: "https://optimistic.etherscan.io",
+    apiKey: process.env.APIKEY_OPTIMISM as string,
+    endpoint: (contractAddress: string) => `https://api-optimistic.etherscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_OPTIMISM}`,
   },
 };
