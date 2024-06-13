@@ -121,6 +121,6 @@ export const NETWORKS: NetworksObject = {
     label: "Base Mainnet",
     url: "https://basescan.org",
     apiKey: process.env.APIKEY_BASE as string,
-    endpoint: (contractAddress: string) => `https://api.basescan.org/api?module=contract&action=getabi&address=${contractAddress}&apikey=${process.env.APIKEY_BASE}`
+    endpoint: (contractAddress: string) => `https://api.basescan.org/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${process.env.APIKEY_BASE}`
   }
 };
